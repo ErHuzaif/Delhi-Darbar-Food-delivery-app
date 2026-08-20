@@ -1,0 +1,24 @@
+{
+  "name": "The Delhi Darbar — Restaurant & Fast Food",
+  "short_name": "Delhi Darbar",
+  "description": "Authentic Kashmiri Wazwan, Tandoori, Chinese & North Indian food. K.P. Road, Anantnag. Customer's Satisfaction is Our Motive.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0c0a08",
+  "theme_color": "#0c0a08",
+  "icons": [
+    {
+      "src": "/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

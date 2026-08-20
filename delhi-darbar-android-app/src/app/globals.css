@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@theme {
+  /* The Delhi Darbar brand palette — black base, warm orange, golden yellow */
+  --color-bg: #0c0a08;
+  --color-surface: #17120e;
+  --color-raise: #211a13;
+  --color-line: #2b2218;
+  --color-cream: #f5eddd;
+  --color-muted: #a69885;
+  --color-flame: #ff7a1f;
+  --color-flamedark: #d95f0e;
+  --color-gold: #f2b84b;
+  --color-goldsoft: #ffd58a;
+  --color-leaf: #4caf6e;
+  --color-chili: #e85a4e;
+
+  --font-display: var(--font-fraunces), "Georgia", serif;
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #070503;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Hide scrollbars on horizontal chip rails */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Soft pulse for the "live" order status ring */
+@keyframes dd-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(242, 184, 75, 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(242, 184, 75, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(242, 184, 75, 0);
+  }
+}
+.dd-pulse {
+  animation: dd-pulse 1.8s ease-out infinite;
+}
+
+@keyframes dd-slide-up {
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.dd-slide-up {
+  animation: dd-slide-up 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes dd-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.dd-fade {
+  animation: dd-fade 0.25s ease-out;
+}
+
+/* Gold delivery pin for Leaflet (divIcon) */
+.dd-pin {
+  background: transparent;
+  border: none;
+}
+.dd-pin svg {
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.55));
+}
+
+/* Dark-map chrome for Leaflet */
+.leaflet-container {
+  background: #0c0a08;
+  font-family: var(--font-manrope), sans-serif;
+}
+.leaflet-control-attribution {
+  background: rgba(12, 10, 8, 0.75) !important;
+  color: #6d6254 !important;
+  font-size: 9px !important;
+}
+.leaflet-control-attribution a {
+  color: #8a7c6a !important;
+}
+.leaflet-control-zoom {
+  border: 1px solid #2b2218 !important;
+  border-radius: 10px !important;
+  overflow: hidden;
+}
+.leaflet-control-zoom a {
+  background: #17120e !important;
+  color: #f2b84b !important;
+  border-color: #2b2218 !important;
+}
